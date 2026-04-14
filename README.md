@@ -2,6 +2,14 @@
 
 Obsidian plugin (desktop only) that pins vault notes to the **left ribbon** as **Lucide** icons. You can add many bookmarks, pick an icon and hex color for each, and reorder them in settings. Clicking a ribbon icon **opens the note in a new tab**, or **focuses the tab** if that note is already open.
 
+## Support
+
+If you find this plugin helpful, consider supporting my work!
+
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy&nbsp;me&nbsp;a&nbsp;coffee&emoji=☕&slug=jason_unix&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/jason_unix)
+
+
+
 ## Requirements
 
 - **Obsidian** 1.11.7 or newer  
@@ -52,4 +60,4 @@ Run `npm run dev` to watch and rebuild `main.js` while you work. Point your vaul
 
 ## License
 
-MIT
+Licensed under the MIT License. See [LICENSE.md](LICENSE.md).
