@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "minAppVersion": "1.11.7",
   "description": "Pin notes to the ribbon as Lucide icons with custom colors. Click opens or focuses the note in a tab.",
-  "author": "",
+  "author": "Jason Bert",
+  "pluginUrl ": "https://github.com/JasonBerto/obsidian_ribbon_bookmarks",
   "isDesktopOnly": true
 }
