@@ -67,6 +67,40 @@ Data is stored in the plugin’s `data.json` under the vault’s plugin folder (
 
 Run `npm run dev` to watch and rebuild `main.js` while you work. Point your vault’s plugin folder at this project (or symlink it) so changes reload quickly.
 
+## Publish to Obsidian Community Plugins
+
+Follow the official guide: **[Submit your plugin](https://docs.obsidian.md/Plugins/Releasing/Submit+your+plugin)**.
+
+1. **Build release artifacts** (from this repo):
+
+   ```bash
+   npm install && npm run build
+   ```
+
+2. **Create a GitHub release** on [JasonBerto/obsidian_ribbon_bookmarks](https://github.com/JasonBerto/obsidian_ribbon_bookmarks):
+
+   - **Tag**: use the same version as `manifest.json` (e.g. `1.0.0`), **without** a `v` prefix.
+   - **Attach these files** as release assets: `main.js`, `manifest.json`, `styles.css` (from the project root after build).
+
+3. **Open a pull request** to add your plugin to the directory:
+
+   - Fork [obsidianmd/obsidian-releases](https://github.com/obsidianmd/obsidian-releases).
+   - Edit `community-plugins.json` and append an entry like:
+
+     ```json
+     {
+       "id": "ribbon-bookmarks",
+       "name": "Ribbon Bookmarks",
+       "author": "Jason Bert",
+       "description": "Pin notes to the ribbon as Lucide icons with custom colors. Click opens or focuses the note in a tab.",
+       "repo": "JasonBerto/obsidian_ribbon_bookmarks"
+     }
+     ```
+
+   - Title the PR: `Add plugin: Ribbon Bookmarks` (see the docs for the exact convention).
+
+After review, the plugin will appear under **Settings → Community plugins** in Obsidian.
+
 ## License
 
 Licensed under the MIT License. See [LICENSE.md](LICENSE.md).
