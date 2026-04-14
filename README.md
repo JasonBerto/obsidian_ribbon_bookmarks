@@ -2,6 +2,11 @@
 
 Obsidian plugin (desktop only) that pins vault notes to the **left ribbon** as **Lucide** icons. You can add many bookmarks, pick an icon and hex color for each, and reorder them in settings. Clicking a ribbon icon **opens the note in a new tab**, or **focuses the tab** if that note is already open.
 
+![Example: Ribbon Bookmarks adds Lucide icons to your Obsidian ribbon](readme_img/ribbon_icons_example.png)
+
+
+
+
 ## Support
 
 If you find this plugin helpful, consider supporting my work!
@@ -27,6 +32,10 @@ If you find this plugin helpful, consider supporting my work!
 - **Rename / delete in the vault**: renames update the stored path when possible; deleted files stay in the list until you remove the bookmark, with a clear missing-file notice on click.
 
 Data is stored in the plugin’s `data.json` under the vault’s plugin folder (no import/export in this version).
+
+![Settings page](readme_img/settings_page.jpg)
+
+
 
 ## Install from source
 
