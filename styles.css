@@ -1,0 +1,91 @@
+/* Settings: bookmark rows */
+.ribbon-bookmarks-settings .ribbon-bookmarks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.6rem 0.5rem;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-secondary);
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-row.dragging {
+  opacity: 0.65;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-drag-handle {
+  cursor: grab;
+  padding: 0.25rem 0.35rem;
+  color: var(--text-muted);
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-drag-handle:active {
+  cursor: grabbing;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-fields {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-path {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-icon-preview {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-normal);
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-icon-row input[type='text'] {
+  flex: 1;
+  min-width: 0;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-color-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmark-color-row input[type='color'] {
+  width: 2rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Ribbon icons: ensure Lucide inherits custom color */
+.ribbon-bookmarks-plugin-icon svg {
+  stroke: currentColor;
+}
