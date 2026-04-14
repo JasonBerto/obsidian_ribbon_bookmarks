@@ -1,5 +1,6 @@
 import { App, ButtonComponent, PluginSettingTab, Setting } from "obsidian";
 import { MarkdownFilePickerModal } from "./filePicker";
+import { LucideIconInputSuggest } from "./iconSuggest";
 import { updateIconPreview } from "./icons";
 import type RibbonBookmarksPlugin from "./main";
 import type { RibbonBookmark } from "./types";
@@ -131,16 +132,23 @@ export class RibbonBookmarksSettingTab extends PluginSettingTab {
     new Setting(fields)
       .setName("Lucide icon")
       .setDesc(
-        "Any Obsidian Lucide icon id (e.g. bookmark, file-text, star). Invalid names fall back to “bookmark” on the ribbon.",
+        "Search icons by name; pick from the list or type an id. Unknown ids fall back to “bookmark” on the ribbon.",
       )
       .addText((text) => {
         text
-          .setPlaceholder("bookmark")
-          .setValue(bm.icon)
-          .onChange((value) => {
-            bm.icon = value.trim() || "bookmark";
-            updateIconPreview(preview, bm.icon);
-          });
+          .setPlaceholder("Search icons…")
+          .setValue(bm.icon);
+        const suggest = new LucideIconInputSuggest(this.app, text.inputEl);
+        this.plugin.register(() => suggest.close());
+        suggest.onSelect((iconId) => {
+          bm.icon = iconId;
+          updateIconPreview(preview, bm.icon);
+          void this.plugin.saveSettings();
+        });
+        text.onChange((value) => {
+          bm.icon = value.trim() || "bookmark";
+          updateIconPreview(preview, bm.icon);
+        });
         text.inputEl.addEventListener("blur", () => {
           void this.plugin.saveSettings();
         });

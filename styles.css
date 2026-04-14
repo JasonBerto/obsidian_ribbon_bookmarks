@@ -70,6 +70,37 @@
   min-width: 0;
 }
 
+/* Icon suggest dropdown (Obsidian popover) */
+.ribbon-bookmarks-icon-suggestion {
+  padding: 0;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmarks-icon-suggestion-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmarks-icon-suggestion-preview {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-normal);
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmarks-icon-suggestion-preview svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ribbon-bookmarks-settings .ribbon-bookmarks-icon-suggestion-name {
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
 .ribbon-bookmarks-settings .ribbon-bookmark-color-row {
   display: flex;
   align-items: center;
